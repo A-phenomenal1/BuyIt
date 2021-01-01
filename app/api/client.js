@@ -3,7 +3,8 @@ import authStorage from "../auth/storage";
 import cache from "../utility/cache";
 
 const apiClient = create({
-  baseURL: "http://192.168.43.220:9000/api",
+  // baseURL: "http://192.168.43.220:9000/api",
+  baseURL: "https://buy-it-app.herokuapp.com/api",
 });
 apiClient.addAsyncRequestTransform(async (request) => {
   const authToken = await authStorage.getToken();
